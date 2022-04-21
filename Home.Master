@@ -4,6 +4,10 @@
 
 <html>
 <head runat="server">
+    <link href="owlCaraosel/owl.theme.defaultin.css" rel="stylesheet" />
+    <link href="css/StyleSheet.css" rel="stylesheet" />
+
+
     <title>We Care</title>
 
 
@@ -15,20 +19,13 @@
     <link href="fontawesome/css/all.css" rel="stylesheet" />
     <%--OwlCaraosel2 css--%>
     <link href="owlCaraosel/owl.carousel.min.css" rel="stylesheet" />
-    <link href="owlCaraosel/owl.theme.default.min.css" rel="stylesheet" />
-    <%--Our custom stylesheet css--%>
-    <link href="css/StyleSheet.css" rel="stylesheet" />
 
-
-    <%--jquery--%>
+    
     <script src="bootstrap/js/jquery-3.6.0.slim.min.js"></script>
-    <%--popper js--%>
     <script src="bootstrap/js/popper.min.js"></script>
-    <%--bootstrap js--%>
+     <%--Bootstrap js--%>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-     <%--OwlCaraosel2 js--%>
-    <script src="owlCaraosel/owl.carousel.min.js"></script>
-
+    
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -37,9 +34,10 @@
     <form id="form1" runat="server">
         
         <div>
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#">
-                    <img src="img/1.png" width="60" height="60"/>
+            <nav class="navbar navbar-expand-lg navbarCls" style="background-color: #CC66FF">
+                <a class="navbar-brand" href="#" style="color: #FFCCFF; font-family: 'Baskerville Old Face'">
+                    <i class="fa-duotone fa-paw"></i>
+                    <i class="fa-duotone fa-stethoscope"></i>
                     Pet Clinic
                 </a>
 
@@ -47,36 +45,36 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color: #CC66FF; font-family: sans-serif; font-size: medium; text-decoration: none; font-weight: 400; font-style: normal; font-variant: normal; color: #FFCCFF;">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="homepage.aspx">Home</a>
+                            <a class="nav-link" href="homepage.aspx" style="color: #FFCCFF">Home</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">About Us</a>
+                            <a class="nav-link" href="#" style="color: #FFCCFF">About Us</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Facilities</a>
+                            <a class="nav-link" href="#" style="color: #FFCCFF">Facilities</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">FAQs</a>
+                            <a class="nav-link" href="#" style="color: #FFCCFF">FAQs</a>
                         </li>
 
                     </ul>
 
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server">View Doctors</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" ForeColor="#FFCCFF">View Doctors</asp:LinkButton>
                         </li>
                         
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server">User Login</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" ForeColor="#FFCCFF">User Login</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server">Sign Up</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" ForeColor="#FFCCFF">Sign Up</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server">New User?</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server" Height="39px" ForeColor="#FFCCFF">New User?</asp:LinkButton>
 
                         </li>
                     </ul>
@@ -88,18 +86,33 @@
 
 
         <!-- Main Content Placeholder -->
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+       <div> 
+           <div class="container" style="padding-top:5px">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <asp:Label ID="Label1" runat="server" Text="Upload Image 1" CssClass="col-mod-2 control-label"></asp:Label>
+                    <div class="col-md-3">
+                        <asp:FileUpload ID="img01" runat="server" CssClass="form-control" />
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
+                            runat="server" ErrorMessage="This feild is required" ControlToValidate="img01" CssClass="text-danger"></asp:RequiredFieldValidator>
+
+                    </div>
+                </div>
+            </div>
+        
         </div>
+      
+               <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+           </div>
         <!-- Main Content Placeholder -->
 
          <!-- Footer -->
         <footer>
-            <div id="footer1" class="container-fluid">
+            <div id="footer1" class="container-fluid" style="background-color: #FFCCFF; color: #660066">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                        <p>
+                        <p style="color: #000000;>
                             <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server">Admin Login</asp:LinkButton>
                             &nbsp;
                             <asp:LinkButton class="footerlinks" ID="LinkButton11" runat="server">Terms of Usage </asp:LinkButton>
@@ -113,10 +126,10 @@
 
                 </div>
             </div>
-            <div id="footer2" class="container-fluid">
+            <div id="footer2" class="container-fluid" style="background-color: #660066; color: #FFCCFF">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                        <p style="color:whitesmoke">&copy All right Reversed. <a class="footerlinks" href="#" target="_blank">We Care</a></p>
+                        <p style="color:whitesmoke">&copy All right Reversed. <a class="footerlinks" href="#" target="_blank" style="background-color: #660066; color: #FFCCFF">We Care</a></p>
                     </div>
                 </div>
             </div>

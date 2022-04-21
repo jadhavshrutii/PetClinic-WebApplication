@@ -4,6 +4,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceholder1" runat="server">
-    <h2>Caring for your pet always...in ALL ways...</h2>
-    <img src="img/11.jpg" width="100%" height="100%"/>
+
+    <h1>Content Here
+    </h1>
 </asp:Content>
