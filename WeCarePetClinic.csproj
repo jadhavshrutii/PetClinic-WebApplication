@@ -85,6 +85,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\UserLoginData.mdf" />
+    <Content Include="App_Data\UserLoginData_log.ldf">
+      <DependentUpon>UserLoginData.mdf</DependentUpon>
+    </Content>
+    <Content Include="book_appointment.aspx" />
     <Content Include="bootstrap\css\bootstrap-grid.css" />
     <Content Include="bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="bootstrap\css\bootstrap-grid.rtl.css" />
@@ -108,10 +113,16 @@
     <Content Include="bootstrap\js\bootstrap.js" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\jquery-3.6.0.slim.min.js" />
+    <Content Include="bootstrap\js\jquery.min.js" />
     <Content Include="bootstrap\js\popper.min.js" />
+    <Content Include="css\doctors_style.css" />
+    <Content Include="css\services_css.css" />
     <Content Include="css\StyleSheet.css" />
+    <Content Include="css\StyleSheet_cards.css" />
     <Content Include="DataTables\jquery.dataTables.min.css" />
     <Content Include="DataTables\jquery.dataTables.min.js" />
+    <Content Include="doctors.aspx" />
+    <Content Include="faqs.aspx" />
     <Content Include="fontawesome\css\all.css" />
     <Content Include="fontawesome\css\all.min.css" />
     <Content Include="fontawesome\css\brands.css" />
@@ -1909,13 +1920,64 @@
     <Content Include="img\7.jpg" />
     <Content Include="img\8.jpg" />
     <Content Include="img\9.jpg" />
+    <Content Include="img\adminuser.png" />
+    <Content Include="img\bg2.jpg" />
+    <Content Include="img\bg3.jpg" />
+    <Content Include="img\bg4.jpg" />
+    <Content Include="img\bgimg.jpg" />
+    <Content Include="img\cat.jpg" />
+    <Content Include="img\dermitology-img.jpg" />
+    <Content Include="img\doc1.png" />
+    <Content Include="img\doc2.jpg" />
+    <Content Include="img\doc3.jpg" />
+    <Content Include="img\doc4.jpg" />
+    <Content Include="img\doc5.jpg" />
+    <Content Include="img\doggos.jpg" />
+    <Content Include="img\generaluser.png" />
+    <Content Include="img\gomming.jpg" />
+    <Content Include="img\micro.jpg" />
+    <Content Include="img\paw.jpg" />
+    <Content Include="img\pet-a.jpg" />
+    <Content Include="img\pet-bd.jpg" />
+    <Content Include="img\pet-bg.jpg" />
+    <Content Include="img\pet-cleaning.jpg" />
+    <Content Include="img\pet-dental.jpg" />
+    <Content Include="img\pet-eating.jpg" />
+    <Content Include="img\regImg1.jpeg" />
+    <Content Include="img\Vaccinations.jpg" />
     <Content Include="owlCaraosel\owl.carousel.min.css" />
     <Content Include="owlCaraosel\owl.carousel.min.js" />
     <Content Include="owlCaraosel\owl.theme.default.min.css" />
+    <Content Include="registration.aspx" />
+    <Content Include="userlogin.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
+    <Content Include="AdminLogin.aspx" />
+    <Content Include="testimonials.aspx" />
+    <Content Include="our_services.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="book_appointment.aspx.cs">
+      <DependentUpon>book_appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="book_appointment.aspx.designer.cs">
+      <DependentUpon>book_appointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="doctors.aspx.cs">
+      <DependentUpon>doctors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="doctors.aspx.designer.cs">
+      <DependentUpon>doctors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="faqs.aspx.cs">
+      <DependentUpon>faqs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="faqs.aspx.designer.cs">
+      <DependentUpon>faqs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Home.Master.cs">
       <DependentUpon>Home.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1924,12 +1986,47 @@
       <DependentUpon>Home.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="registration.aspx.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration.aspx.designer.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userlogin.aspx.cs">
+      <DependentUpon>userlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userlogin.aspx.designer.cs">
+      <DependentUpon>userlogin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testimonials.aspx.cs">
+      <DependentUpon>testimonials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testimonials.aspx.designer.cs">
+      <DependentUpon>testimonials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="our_services.aspx.cs">
+      <DependentUpon>our_services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="our_services.aspx.designer.cs">
+      <DependentUpon>our_services.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -2001,6 +2098,7 @@
     <Content Include="fontawesome\webfonts\fa-v4compatibility.ttf" />
     <Content Include="fontawesome\webfonts\fa-v4compatibility.woff2" />
     <Content Include="Home.Master" />
+    <Content Include="css\faqs_style.css" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
